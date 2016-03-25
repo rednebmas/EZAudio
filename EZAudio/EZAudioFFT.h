@@ -29,6 +29,16 @@
 @class EZAudioFFT;
 
 //------------------------------------------------------------------------------
+#pragma mark - Data Structures
+//------------------------------------------------------------------------------
+
+typedef NS_ENUM(NSInteger, EZAudioFFTWindowFunction)
+{
+    EZAudioFFTWindowFunctionNone,
+    EZAudioFFTWindowFunctionGaussian
+};
+
+//------------------------------------------------------------------------------
 #pragma mark - EZAudioFFTDelegate
 //------------------------------------------------------------------------------
 
@@ -200,6 +210,13 @@
  A float representing the sample rate of the incoming audio data.
  */
 @property (readwrite, nonatomic) float sampleRate;
+
+//------------------------------------------------------------------------------
+
+/**
+ Indicates which window function to apply to signal before performing FFT. Default is none.
+ */
+@property (readwrite, nonatomic) EZAudioFFTWindowFunction windowFunction;
 
 //------------------------------------------------------------------------------
 #pragma mark - Actions
