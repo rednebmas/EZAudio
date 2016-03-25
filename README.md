@@ -1,3 +1,8 @@
+This fork adds the ability to apply a gaussian window function before performing a FFT, and the ability to get audio frames from a file *sequentially* at a certain index.
+----------------------------------------------------------
+----------------------------------------------------------
+----------------------------------------------------------
+
 ![alt text](http://i.imgur.com/ll5q68r.png "EZAudioLogo")
 
 A simple, intuitive audio framework for iOS and OSX.
